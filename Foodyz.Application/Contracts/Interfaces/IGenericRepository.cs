@@ -9,7 +9,7 @@ namespace Foodyz.Application.Contracts.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAllAsync(Expression<Func<T,bool>> filter = null , Func<IQueryable<T>,IOrderedQueryable<T>> orderby = null, string[] include = null);
+        Task<List<T>> GetAllAsync(Expression<Func<T,bool>> filter = null , Func<IQueryable<T>,IOrderedQueryable<T>> orderby = null, string[] include = null);
         Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> OrderBy = null, string[] include = null);
 
         IQueryable<T> Sync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> OrderBy = null, string[] include = null);

@@ -1,4 +1,6 @@
-﻿using Foodyz.Infrastructure.Data;
+﻿using Foodyz.Application.Contracts.Interfaces;
+using Foodyz.Infrastructure.Data;
+using Foodyz.Infrastructure.Implemention;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,8 @@ namespace Foodyz.Infrastructure.Register
         {
             services.AddDbContext<ApplicationDbContext>
                 (o=> o.UseNpgsql(configuration.GetConnectionString("Default")));
+            services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+            services.AddScoped<IRestaurantRepository, RestaurantRepository>();
             return services;
         }
     }

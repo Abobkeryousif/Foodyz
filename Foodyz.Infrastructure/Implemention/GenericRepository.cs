@@ -37,7 +37,7 @@ namespace Foodyz.Infrastructure.Implemention
             return result.FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null, string[] include = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null, string[] include = null)
         {
             var result = Sync(filter, orderby, include);
             return await result.ToListAsync();

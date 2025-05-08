@@ -1,0 +1,26 @@
+﻿
+
+using System.Net;
+
+namespace Foodyz.Core.Commen
+{
+    public class HttpResponse<T> where T : class
+    {
+        public HttpResponse(HttpStatusCode statusCode , string message , T date)
+        {
+            StatusCode = (int)statusCode;
+            Message = message;
+            Data = date;
+        }
+
+        public HttpResponse(HttpStatusCode statusCode, string message)
+        {
+            StatusCode = (int)statusCode;
+            Message = message;
+        }
+
+        public int StatusCode { get; set; }
+        public string Message { get; set; }
+        public T Data { get; set; }
+    }
+}
