@@ -1,6 +1,7 @@
 ﻿using Foodyz.Application.DTOs;
 using Foodyz.Application.Features.Command.Restaurants;
 using Foodyz.Application.Features.Query;
+using Foodyz.Application.Features.Query.Restaurants;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

@@ -1,13 +1,11 @@
-﻿
-
-using Foodyz.Application.Contracts.Interfaces;
+﻿using Foodyz.Application.Contracts.Interfaces;
 using Foodyz.Application.DTOs;
 using Foodyz.Core.Commen;
 using Foodyz.Core.Entities;
 using MediatR;
 using System.Net;
 
-namespace Foodyz.Application.Features.Query
+namespace Foodyz.Application.Features.Query.Restaurants
 {
     public record GetByNameRestauranQuery(GetByNameRestauranDto GetByNameRestauranDto) : IRequest<HttpResponse<Restaurant>>;
     public class GetByNameRestauranQueryHandler : IRequestHandler<GetByNameRestauranQuery, HttpResponse<Restaurant>>

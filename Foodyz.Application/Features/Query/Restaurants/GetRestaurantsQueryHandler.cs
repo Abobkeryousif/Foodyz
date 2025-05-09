@@ -4,7 +4,7 @@ using Foodyz.Core.Entities;
 using MediatR;
 using System.Net;
 
-namespace Foodyz.Application.Features.Query
+namespace Foodyz.Application.Features.Query.Restaurants
 {
     public record GetRestaurantsQuery : IRequest<HttpResponse<List<Restaurant>>>;
     public class GetRestaurantsQueryHandler : IRequestHandler<GetRestaurantsQuery, HttpResponse<List<Restaurant>>>

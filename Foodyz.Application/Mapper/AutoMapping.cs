@@ -14,6 +14,7 @@ namespace Foodyz.Application.Mapper
         public AutoMapping()
         {
             CreateMap<Restaurant , RestaurantDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
         }
     }
 }

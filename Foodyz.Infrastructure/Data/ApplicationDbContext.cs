@@ -15,6 +15,8 @@ namespace Foodyz.Infrastructure.Data
         public virtual DbSet<Restaurant> Restaurants { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Photo> Photos { get; set; }
+
+        public virtual DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

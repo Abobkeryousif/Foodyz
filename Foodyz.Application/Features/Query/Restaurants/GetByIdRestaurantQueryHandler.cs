@@ -10,7 +10,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Foodyz.Application.Features.Query
+namespace Foodyz.Application.Features.Query.Restaurants
 {
     public record GetByIdRestaurantQuery(int Id) : IRequest<HttpResponse<Restaurant>>;
     public class GetByIdRestaurantQueryHandler : IRequestHandler<GetByIdRestaurantQuery, HttpResponse<Restaurant>>
